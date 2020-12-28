@@ -1,0 +1,15 @@
+.App {
+  text-align: center;
+}
+.App-header {
+  margin-bottom: 20px;
+}
+
+.App-header .link {
+  margin-right: 5px;
+  text-decoration: none;
+  color: blue;
+  font-size: 15px;
+  font-weight: bold;
+}
+
