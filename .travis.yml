@@ -17,3 +17,15 @@ after_success:
   - docker push atinders92/multi-nginx
   - docker push atinders92/multi-server
   - docker push atinders92/multi-worker
+
+deploy:
+  provider: elasticbeanstalk
+  region: "ap-southeast-2"
+  app: "multi-docker-app"
+  env: "MultiDockerApp-env"
+  bucket_name: "elasticbeanstalk-ap-southeast-2-513867669810"
+  bucket_path: "docket-multi-app"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
